@@ -19,7 +19,12 @@ export class ProductListComponent implements OnInit {
   @Input() productList: Product[];
   @Output() onProductSelected: EventEmitter<Product>;
 
-  constructor() { }
+  private currentProduct: Product;
+
+  constructor() { 
+    this.onProductSelected = new EventEmitter();
+  }
+
 
   ngOnInit() {
   }
